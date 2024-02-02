@@ -9,6 +9,7 @@ import './index.css';
 import { AuthProvider } from './context/Auth';
 import ProtectedRoute from './components/ProtectedRoute';
 import Lyt_Home from './layouts/Lyt_Home';
+import { ThemeProvider } from './context/Theme';
 
 const router = createBrowserRouter([
   {
@@ -51,11 +52,13 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider 
-        router={router}
-        fallbackElement={<Fallback />}
-      />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <RouterProvider 
+          router={router}
+          fallbackElement={<Fallback />}
+        />
+      </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )

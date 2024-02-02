@@ -49,7 +49,7 @@ export function Component() {
 
     return (
     <>
-        <div className="card shadow-lg compact grid place-items-center py-8 bg-base-300">
+        <div className="card shadow-lg compact grid place-items-center py-8 bg-base-100">
             <div className="avatar opacity-90">
                 <div 
                     className={`mb-8 rounded-full w-32 h-32 ring ring-offset-base-100 ring-offset-2 ${active ? "ring-success" : "ring-error"}`}
@@ -91,7 +91,7 @@ export function Component() {
         </div>
 
         {/* Grid auto columns */}
-        <div className="grid grid-cols-3 gap-4 p-8">
+        <div className="grid grid-cols-3 gap-4 p-4">
             {loading ? <span className="loading loading-spinner loading-sm"></span> 
             :
             SesionsDays.length === 0 ? 

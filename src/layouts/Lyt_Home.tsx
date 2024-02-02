@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation";
 import { BurgerBtn } from "../components/Icons";
 import { Outlet } from "react-router-dom";
 import { useRef } from "react";
+import ThemeSwitch from "../components/ThemeSwitch";
 
 export default function () {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -9,9 +10,9 @@ export default function () {
     return (
         <div className="drawer">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" ref={inputRef} />
-            <div className="drawer-content flex flex-col bg-base-100">
+            <div className="drawer-content flex flex-col bg-base-300">
                 {/* -------------- Navbar -------------- */}
-                <div className="w-full navbar bg-base-300 shadow-lg">
+                <div className="w-full navbar bg-base-100 shadow-lg">
                     <div className="flex-none lg:hidden">
                         <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                             <BurgerBtn />
@@ -21,6 +22,8 @@ export default function () {
                         <h2 className="text-2xl font-bold">
                             ActiviTracker
                         </h2>
+                        <div className="divider divider-horizontal"></div>
+                        <ThemeSwitch />
                     </div>
                     <div className="flex-none hidden lg:block">
                         <ul className="menu menu-horizontal">

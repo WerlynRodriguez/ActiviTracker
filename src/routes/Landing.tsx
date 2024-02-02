@@ -25,8 +25,6 @@ export default function () {
                     </div>
                 </div>
             </div>
-
-            
             
             <footer className="footer items-center p-4 bg-neutral text-neutral-content">
                 <aside className="items-center grid-flow-col">

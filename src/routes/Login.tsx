@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { loginReq } from "../api";
 import { useState } from "react";
 import Alert from "../components/Alert";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/Auth";
 
 export function Component(){
@@ -63,20 +63,32 @@ export function Component(){
                             </label>
                             <input 
                                 type="password" 
-                                placeholder="ej: verem4st3erkias" 
+                                placeholder="ej: M4st3AndKias" 
                                 className="input input-bordered"
                                 {...register("password", { required: true })} 
                             />
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary" disabled={loading}>
+                            <button className="btn btn-primary">
                                 Inicio de sesión
+                                {loading ? 
+                                    <span className="loading loading-spinner loading-sm"></span> 
+                                : 
+                                    <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                                }
                             </button>
+                            <Link to="/">
+                                <button className="text-center block mt-4 text-sm text-blue-500 btn btn-ghost">
+                                    <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+                                    Regresar
+                                </button>
+                            </Link>
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
     )
 }
