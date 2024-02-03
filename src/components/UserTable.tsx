@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { TTimeData, IUser } from "../api/types";
 import { addOne } from "../utils";
-import Count from "./Count";
 
 function TableRow(props: IUser & {  n: number, onCickTableRow?: (id: string) => void }) {
     const { id, username, active, n, onCickTableRow } = props;
@@ -30,8 +29,8 @@ function TableRow(props: IUser & {  n: number, onCickTableRow?: (id: string) => 
                     {username}
                 </button>
             </td>
-            <td><Count time={time} /></td>
-            <td>{active && <div className="badge badge-success gap-2"></div>}</td>
+            <td>{time.hours}h {time.minutes}m {time.seconds}s</td>
+            <td>{active && <div className="badge badge-success gap-2"> activo </div>}</td>
         </tr>
     )
 }

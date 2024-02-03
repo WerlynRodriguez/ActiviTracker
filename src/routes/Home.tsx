@@ -111,9 +111,9 @@ export function Component(){
                 </div>
                 <div className="stat-title">Usuarios Activos</div>
                 <div className="stat-value text-success">
-                    <span className="countdown">
-                        <span style={{ "--value": totalActiveUsers } as React.CSSProperties}></span>U
-                    </span>
+                    {
+                        totalActiveUsers > 0 ? totalActiveUsers : "Nadie"
+                    }
                 </div>
                 <div className="stat-desc">De todos los usuarios existentes</div>
             </div>
