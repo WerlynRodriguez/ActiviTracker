@@ -51,14 +51,12 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <AuthProvider>
-        <RouterProvider 
-          router={router}
-          fallbackElement={<Fallback />}
-        />
-      </AuthProvider>
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider>
+    <AuthProvider>
+      <RouterProvider 
+        router={router}
+        fallbackElement={<Fallback />}
+      />
+    </AuthProvider>
+  </ThemeProvider>
 )

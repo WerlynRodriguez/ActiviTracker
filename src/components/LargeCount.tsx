@@ -20,9 +20,9 @@ export default function (props: { time: TTimeData }){
 
     return (
         <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-            <BigValue value={hours} label="hours"/>
-            <BigValue value={minutes} label="min"/>
-            <BigValue value={seconds} label="sec"/>
+            <BigValue value={hours} label="hours" key={"FirstBigValue"} />
+            <BigValue value={minutes} label="min" key={"SecondBigValue"} />
+            <BigValue value={seconds} label="sec" key={"ThirdBigValue"} />
         </div>
     )
 }

@@ -7,9 +7,9 @@ export default function (props: { time: TTimeData }){
 
     return (
         <span className="countdown">
-            <NumValue value={hours}/>:
-            <NumValue value={minutes}/>:
-            <NumValue value={seconds}/>
+            <NumValue key={"FirstNumValue"} value={hours}/>:
+            <NumValue key={"SecondNumValue"} value={minutes}/>:
+            <NumValue key={"ThirdNumValue"} value={seconds}/>
         </span>
     )
 }

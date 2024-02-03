@@ -91,7 +91,7 @@ export function Component() {
         </div>
 
         {/* Grid auto columns */}
-        <div className="grid grid-cols-3 gap-4 p-4">
+        <div className="grid lg:grid-cols-3 mt-2 md:grid-cols-2 grid-cols-1 gap-4">
             {loading ? <span className="loading loading-spinner loading-sm"></span> 
             :
             SesionsDays.length === 0 ? 
