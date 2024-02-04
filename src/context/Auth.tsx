@@ -34,7 +34,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                 setIsAuth(false);
                 localStorage.removeItem('username');
                 localStorage.removeItem('id');
-                console.error(err);
             });
     }
 

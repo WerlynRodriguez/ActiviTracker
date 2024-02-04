@@ -21,7 +21,6 @@ const router = createBrowserRouter([
     path: "/login",
     lazy: () => import("./routes/Login"),
   },
-  // ProtectedRoutes
   {
     element: <ProtectedRoute />,
     children: [
